@@ -39,8 +39,8 @@ namespace ConsoleApplication7
                 }
                 for (int y = 0; y < 39; y++)
                 {
-                    Console.Write(" ");
-                    Console.Write('*');
+
+                    Console.Write("* ");
                 }
                 Console.ResetColor();
                 Console.WriteLine();
