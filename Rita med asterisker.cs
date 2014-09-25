@@ -11,43 +11,44 @@ namespace ConsoleApplication7
         static void Main(string[] args)
         {
 
-            //Deklaration av variabl
-            int i = 1;
 
-            //for-satsen 
-            for (int x = 0; x < 26; x++)
+
+            //for-loop som räknar till 26 rader.
+            for (int row = 0; row < 26; row++)
             {
 
-                switch (i)
+                //switch-sats som gör så att det blir olika färger på raderna.
+                switch (row % 3)
                 {
-                    case 1:
+                    case 0:
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        i++;
                         break;
-                    case 2:
+
+                    case 1:
                         Console.ForegroundColor = ConsoleColor.Magenta;
-                        i++;
                         break;
-                    case 3:
+
+                    case 2:
                         Console.ForegroundColor = ConsoleColor.Green;
-                        i = 1;
                         break;
                 }
-                if (x % 2 != 0)
+
+
+                if (row % 2 != 0)
                 {
                     Console.Write(" ");
                 }
-                for (int y = 0; y < 39; y++)
+
+                //for-loop som räknar till 39 stjärnor 
+                for (int col = 0; col < 39; col++)
                 {
 
                     Console.Write("* ");
                 }
-                Console.ResetColor();
                 Console.WriteLine();
             }
 
-
-
+            Console.ResetColor();
         }
     }
 }
